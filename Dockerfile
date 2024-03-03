@@ -1,3 +1,4 @@
 FROM openjdk:17-jdk-alpine
-COPY ./src/resources/*.jar app.jar
+VOLUME  /tmp
+COPY ./build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
