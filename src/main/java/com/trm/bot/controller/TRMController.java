@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/TRM")
 public class TRMController {
     private final Scrapper scrapper;
-    @Autowired
     public TRMController(Scrapper scrapper){
         this.scrapper = scrapper;
     }
