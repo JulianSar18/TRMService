@@ -9,8 +9,6 @@ USER root
 RUN chown -R gradle /home/gradle/src
 
 RUN gradle build || return 0
-COPY . .
-
 
 # actual container
 FROM openjdk:17-jdk-alpine
