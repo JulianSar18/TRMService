@@ -1,6 +1,6 @@
-FROM gradle:7.6-jdk  AS TEMP_BUILD_IMAGE
-COPY --chown=gradle:gradle . /home/gradle/src
+FROM gradle:7.6-jdk  AS build
 WORKDIR /home/gradle/src
+COPY --chown=gradle:gradle . /home/gradle/src
 RUN gradle build --no-daemon
 
 # actual container
