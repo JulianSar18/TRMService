@@ -1,7 +1,7 @@
 FROM gradle:7.6-jdk  AS build
 WORKDIR /home/gradle/src
 COPY --chown=gradle:gradle . /home/gradle/src
-RUN gradle build --no-daemon
+RUN gradle clean build --no-daemon
 
 # actual container
 FROM openjdk:17-jdk-alpine
